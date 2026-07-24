@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Cambia el dominio por el tuyo cuando lo conectes en Vercel -->
+<!--
+  /ebook SÍ se lista: queremos que Google la indexe y la posicione.
+  Que no haya enlaces hacia ella desde la portada es una decisión de
+  navegación, no de SEO: Google la encuentra por este sitemap.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tunuevaeraencristo.com/</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tunuevaeraencristo.com/ebook</loc>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://tunuevaeraencristo.com/politica-privacidad.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://tunuevaeraencristo.com/terminos.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>
