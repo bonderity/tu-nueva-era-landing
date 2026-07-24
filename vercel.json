@@ -1,16 +1,22 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": false,
+  "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/ebook/Imagenes/(.*)",
+      "source": "/(.*).webp",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/ebook/tailwind.min.css",
+      "source": "/(.*).jpg",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/tailwind.min.css",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
