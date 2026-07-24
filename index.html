@@ -23,14 +23,15 @@
   ══════════════════════════════════════════════════════════════════
   PÁGINA RAÍZ — "PRÓXIMAMENTE"
 
-  DELIBERADAMENTE NO CONTIENE:
-   · Ningún Meta Pixel  → el tráfico de esta página NO contamina
-     las métricas ni las conversiones de la página de venta.
-   · Ningún enlace, botón ni menú hacia /ebook → esa ruta queda
-     oculta y solo se alcanza con el enlace directo.
+  REGLA QUE HAY QUE MANTENER:
+   · Esta página NO lleva Meta Pixel  → así el tráfico de la portada
+     no contamina las métricas ni las conversiones de /ebook.
+     Al añadir contenido nuevo aquí, NO pegues el pixel.
 
-  Al añadir contenido nuevo aquí en el futuro, mantén ambas reglas
-  si quieres conservar el pixel de /ebook limpio.
+  Sí tiene un botón "Ver el libro" hacia /ebook (pedido expresamente).
+  En cambio /ebook NO tiene ningún enlace de vuelta a esta portada:
+  el visitante que llega desde un anuncio de Meta no puede salirse
+  hacia aquí y perder la conversión. Mantén esa dirección única.
   ══════════════════════════════════════════════════════════════════
 -->
 
@@ -83,7 +84,25 @@
     margin:0 auto 32px;
     max-width:420px;
   }
-  .rama{width:220px;max-width:70%;height:auto;color:#C9A84C;margin:0 auto 32px;display:block}
+  .cta{
+    display:inline-block;
+    background:#C9A84C;
+    color:#3D0F0F;
+    font-family:"Playfair Display",serif;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:14px;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:4px;
+    box-shadow:0 4px 24px rgba(201,168,76,.25);
+    transition:transform .25s ease, background-color .25s ease, box-shadow .25s ease;
+  }
+  .cta:hover{background:#b8963f;transform:scale(1.02);box-shadow:0 6px 32px rgba(201,168,76,.4)}
+  .cta:active{transform:scale(.99)}
+  @media (max-width:640px){.cta{width:90%;padding:16px 20px;font-size:13px}}
+  .rama{width:220px;max-width:70%;height:auto;color:#C9A84C;margin:32px auto;display:block}
   .verso{
     font-family:"Playfair Display",serif;
     font-style:italic;
@@ -116,6 +135,10 @@
       Estamos preparando un espacio para la mujer que quiere una fe honesta,
       profunda y sin actuaciones. Muy pronto.
     </p>
+
+    <p class="sub" style="margin-bottom:22px">Mientras tanto, ya puedes conocer el libro:</p>
+
+    <a class="cta" href="/ebook">Ver el libro</a>
 
     <svg class="rama" viewBox="0 0 280 32" fill="none" aria-hidden="true">
       <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
